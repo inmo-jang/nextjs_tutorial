@@ -21,3 +21,4 @@ cd nextjs_tutorial
 npm run dev
 ```
 
+이제 `localhost:3000`을 접속하면 된다. 
