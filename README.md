@@ -4,7 +4,7 @@
 ### 기본 개념
 - [Next.js 처음 시작하기 (Hello World)](/tutorials/helloworld.md)
 - (Coming soon) React, React-native, Node.js, Next.js 등 개념
-- (Coming soon) Hook vs Class 구조 
+- (Under development) [Hook vs Class 구조](/tutorials/Hook_vs_Class.md) 
 - (Coming soon) Styling: css 이용하기 vs div에서 바로 설정하기
 - (Coming soon) Dynamic import 및 SSR과 충돌나는 components import하기
 
