@@ -7,6 +7,7 @@
 - (Under development) [Hook vs Class 구조](/tutorials/Hook_vs_Class.md) 
 - (Coming soon) Styling: css 이용하기 vs div에서 바로 설정하기
 - (Coming soon) Dynamic import 및 SSR과 충돌나는 components import하기
+- [`useRouter`이용하여 페이지 이동하기 및 변수 넘기기](/tutorials/useRouter.md)
 
 ### 주요 컴포넌트
 - (Coming soon) React용 기본도구 모음 (`react-bootstrap`) 

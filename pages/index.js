@@ -5,18 +5,17 @@ import Layout from '../components/layout'
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap styling
 
 import React from 'react'
-
-
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 // function Headline({value}) {
 //   return <h1>{value}</h1>;
 // }
 
+const Headline = ({greeting}) => {
+  return <h1>{greeting}</h1>;
+}
 
-function Home() {
-
-
-
-  const GridButtons = () => {
+const GridButtons = () => {
   return (
       <div className={styles.grid}>
         <a href="https://nextjs.org/docs" className={styles.card}>
@@ -49,22 +48,25 @@ function Home() {
       </div>      
   )
 };
-const Headline = ({greeting}) => {
-  return <h1>{greeting}</h1>;
-}
 
 
-
+function App() {
+  const router = useRouter() 
   return (
-    <>
-
-
     <Layout>    
       
         <Head>
           <title>NextJS Tutorial</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+
+        <Link href={{
+          pathname: "/examples/useRouterInClass",
+          query: {
+          wp: "3",
+          line: "15L"
+          }
+      }}>Example: useRouter in Class</Link>
 
         <Headline greeting="hahaha"></Headline>
 
@@ -94,48 +96,7 @@ const Headline = ({greeting}) => {
         </footer>
      
     </Layout>
-    </>
+
   )
-
-
-  // function Headline({value}) {
-  //   return <h1>{value}123</h1>;
-  // }  
 }
-
-
-// function GridButtons () {
-//   return (
-//       <div className={styles.grid}>
-//         <a href="https://nextjs.org/docs" className={styles.card}>
-//           <h3>Documentation &rarr;</h3>
-//           <p>Find in-depth information about Next.js features and API.</p>
-//         </a>
-
-//         <a href="https://nextjs.org/learn" className={styles.card}>
-//           <h3>Learn &rarr;</h3>
-//           <p>Learn about Next.js in an interactive course with quizzes!</p>
-//         </a>
-
-//         <a
-//           href="https://github.com/vercel/next.js/tree/master/examples"
-//           className={styles.card}
-//         >
-//           <h3>Examples &rarr;</h3>
-//           <p>Discover and deploy boilerplate example Next.js projects.</p>
-//         </a>
-
-//         <a
-//           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-//           className={styles.card}
-//         >
-//           <h3>Deploy &rarr;</h3>
-//           <p>
-//             Instantly deploy your Next.js site to a public URL with Vercel.
-//           </p>
-//         </a>
-//       </div>      
-//   )
-// };
-
-export default Home;
+export default App;
