@@ -10,17 +10,18 @@ const AppWithRouter = (props) => {
 const Menu = (props) => {
     const router = useRouter()
     
-    // console.log("props.placeholder = ", props.placeholder)
+    // console.log("props.defaultWP = ", props.defaultWP)
     return (
+        <>
         <Form.Control 
             size="sm" as="select" 
-            defaultValue ={props.placeholder}
+            defaultValue ={props.defaultWP}
             onChange={(e) => {
                 router.push({
                     pathname: "/examples/useRouterInClass2",
                     query: {
                     wp: e.target.value,
-                    line: "15L"
+                    line: props.defaultLine
                     } 
                 })
                 console.log("e.target.value = ", e.target.value)
@@ -32,7 +33,30 @@ const Menu = (props) => {
         <option>3</option>
         <option>4</option>
 
-        </Form.Control>        
+        </Form.Control>  
+        
+        <Form.Control 
+            size="sm" as="select" 
+            defaultValue ={props.defaultLine}
+            onChange={(e) => {
+                router.push({
+                    pathname: "/examples/useRouterInClass2",
+                    query: {
+                    wp: props.defaultWP,
+                    line: e.target.value
+                    } 
+                })
+                console.log("e.target.value = ", e.target.value)
+
+            }}
+            >
+        <option>15L</option>
+        <option>16L</option>
+        <option>17L</option>
+        <option>18L</option>
+
+        </Form.Control>     
+        </>   
     )
 }
 class App extends React.Component {
@@ -47,7 +71,10 @@ class App extends React.Component {
     render() {
         return(
             <>
-            <Menu placeholder = {this.state.wp}></Menu>
+            <Menu 
+                defaultWP = {this.state.wp}
+                defaultLine = {this.state.line}
+                ></Menu>
             <div>
                 Hello World! WP = {this.state.wp}, LINE = {this.state.line}
             </div>
