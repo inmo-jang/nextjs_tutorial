@@ -68,6 +68,8 @@ function App() {
           }
       }}>Example: useRouter in Class</Link>
 
+        <Link href="/redux-toolkit">Example: Redux Toolkit</Link>
+
         <Headline greeting="hahaha"></Headline>
 
         <main className={styles.main}>
