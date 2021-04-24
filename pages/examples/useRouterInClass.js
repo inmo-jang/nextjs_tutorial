@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Form from 'react-bootstrap/Form'
+import Layout from '../../components/layout';
 
 const AppWithRouter = (props) => {
     const router = useRouter()
@@ -70,7 +71,7 @@ class App extends React.Component {
 
     render() {
         return(
-            <>
+            <Layout>
             <Menu 
                 defaultWP = {this.state.wp}
                 defaultLine = {this.state.line}
@@ -78,7 +79,7 @@ class App extends React.Component {
             <div>
                 Hello World! WP = {this.state.wp}, LINE = {this.state.line}
             </div>
-            </>
+            </Layout>
         )
     }
 }
