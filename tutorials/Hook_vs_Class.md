@@ -2,7 +2,7 @@
 
 React를 이용해서 Web을 만들때 *Class*를 이용하는 방식과 *Hook*를 이용하는 방식이 있다. 동일한 기능이더라도 어떠한 방식으로 구현하느냐에 따라서 다른 coding structure를 가지게 된다. 
 
-`/pages/examples/hook_vs_class.js`를 참조. 
+[`/pages/examples/hook_vs_class.js`](/pages/examples/hook_vs_class.js)를 참조. 
 
 
 ## (1) 기본 형식
